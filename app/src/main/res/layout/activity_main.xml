@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/photoEd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="photo name"/>
+    
+    <Button
+        android:id="@+id/findBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="find"/>
+    <Button
+        android:id="@+id/updateResultBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="update result"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/resyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+</LinearLayout>
