@@ -6,8 +6,9 @@ import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import coil.load
 import com.example.pixabay.databinding.ItemImageBinding
+import okhttp3.internal.notify
 
-class ImageAdapter(val list: List<ImageModel>) : Adapter<ImageAdapter.ImageViewHolder>() {
+class ImageAdapter(val list: ArrayList<ImageModel>) : Adapter<ImageAdapter.ImageViewHolder>() {
     class ImageViewHolder(val binding: ItemImageBinding) : ViewHolder(binding.root){
         fun bind(imageModel: ImageModel){
             binding.imageView.load(imageModel.largeImageURL)
@@ -26,5 +27,12 @@ class ImageAdapter(val list: List<ImageModel>) : Adapter<ImageAdapter.ImageViewH
         return list.size
     }
 
+    fun addImage(image: ImageModel){
+        list.add(image)
+    }
+
+    fun clearResult(){
+        list.clear()
+    }
 
 }

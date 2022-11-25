@@ -12,6 +12,6 @@ interface PixaApi {
                 @Query("q") keyWord:String,
                 @Query("key")key:String = "31551321-e6dd76f6294f35385ee87bb13",
                 @Query("page") page:Int,
-                @Query("per_page") perPage:Int
+                @Query("per_page") perPage:Int = 5
     ) : Call<PixaModel>
 }
